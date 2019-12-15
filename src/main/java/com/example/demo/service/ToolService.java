@@ -11,9 +11,9 @@ import java.util.Optional;
 public class ToolService {
     private final ToolRepository toolRepository;
 
-    public ToolService(ToolRepository toolsRepository){this.toolRepository = toolsRepository;}
+    public ToolService(ToolRepository toolRepository){this.toolRepository = toolRepository;}
 
-    public Tool saveTools (Tool tools) {return toolRepository.save(tools);}
+    public Tool saveTool (Tool tool) {return toolRepository.save(tool);}
 
     public List<Tool> getAll(){return toolRepository.findAll();}
 

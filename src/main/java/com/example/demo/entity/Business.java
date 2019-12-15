@@ -21,7 +21,7 @@ public class Business {
     private List<Warehouse> warehouses = new ArrayList<>();
 
     @OneToMany(mappedBy = "business")
-    private List<Tool> tools = new ArrayList<>();
+    private List<Tool> tool = new ArrayList<>();
 
     @OneToMany(mappedBy = "business")
     private List<OSH> oshes = new ArrayList<>();

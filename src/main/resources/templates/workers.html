@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en"
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ZNR</title>
+    <link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet" />
+</head>
+<body>
+<div id="navbar" class="topnav">
+    <a href="/">Strona główna</a>
+    <a href="/osh">Środki BHP</a>
+    <a href="/tool">Materiały Eksploatacyjne</a>
+    <a href="/warehouse">Magazyn</a>
+    <a href="/tool">Narzędzia Trwałe</a>
+    <a href="/devices">Urządzenia</a>
+    <a class="active" href="/workers">Lista Pracowników</a>
+</div>
+<table style="width:100%">
+    <tr>
+        <th>Imie</th>
+        <th>Nazwisko</th>
+        <th>Numer Telefonu</th>
+    </tr>
+    <tr th:each="worker : ${workers}">
+        <th th:text="${worker.firstName}"></th>
+        <th th:text="${worker.lastName}"></th>
+        <th th:text="${worker.phoneNumber}"></th>
+    </tr>
+</table>
+</body>
+</html>
